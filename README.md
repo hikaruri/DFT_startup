@@ -48,13 +48,13 @@ $ sudo port select --set gcc mp-gcc8
   mp-gcc8 (active)
   none
 ```
-gccにgcc8が通っているのか確認
+一旦、terminalをRebootしてgccにgcc8が通っているのか確認
 ```shell script
 $gcc -v
 (中略)
 gcc version 8.4.0 (MacPorts gcc8 8.4.0_0) 
 ```
-と出たら成功
+と出たら成功。
 ```shell script
 $gcc -v
 (中略)
