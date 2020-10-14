@@ -15,9 +15,13 @@ mpich-gcc8-fortran
 none (active)
 $ sudo port select --set mpi mpich-gcc8-fortran
 Selecting 'mpich-gcc8-fortran' for 'mpi' succeeded. 'mpich-gcc8-fortran' is now active.
+```
+一旦、terminalをRebootして
+```shell script
 $ mpicc -v
 gcc version 8.4.0 (MacPorts gcc8 8.4.0_0) 
 ```
+で確認
 ※OpenMPIでも良いが、MKLと一緒に使えない、
 OpenMPI+scalapackを使いたい場合は[こちら](https://qiita.com/hikaruri/items/0fa942c9eacb8930a792)
 ## fftw3
