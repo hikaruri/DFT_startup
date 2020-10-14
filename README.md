@@ -64,6 +64,8 @@ Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 ```
 は失敗
 ## gnuplot
+For Catalina, macports version's gnuplot has some bugs. 
+Please install [the binary version](https://csml-wiki.northwestern.edu/index.php/Binary_versions_of_Gnuplot_for_OS_X)
 macports経由で
 ```shell script
 $ sudo port install gnuplot
