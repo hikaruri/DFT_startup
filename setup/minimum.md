@@ -1,5 +1,5 @@
 # minimum setup
-Install
+Installしたいものリスト
 - macports
 - C/C++/fortran compiler
 - gnuplot
