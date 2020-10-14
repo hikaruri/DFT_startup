@@ -1,10 +1,13 @@
 
 # CrySPY setup
-基本的に[マニュアル](https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html)通りインストールすれば良い。注意事項をメモ
+基本的に[マニュアル](https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html)通りインストールすれば良い。
+
 CrySPY0.8.0を使うには
 - find_wy
 - COMBO
+
 が必要。その前に必要なpythonパッケージをpipでインストール
+
 ## requirement
 requirement.txtに
 ```
