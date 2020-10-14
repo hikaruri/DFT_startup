@@ -37,10 +37,18 @@ $ sudo port search gcc
 ```
 gcc8を入れる
 ```shell script
-$ sudo port install gcc
 $ sudo port install gcc8
 ```
-インストールしたら確認
+インストールしたらselect
+```shell script
+$ sudo port select --list gcc
+  mp-gcc8
+  none
+$ sudo port select --set gcc mp-gcc8
+  mp-gcc8 (active)
+  none
+```
+gccにgcc8が通っているのか確認
 ```shell script
 $gcc -v
 (中略)
