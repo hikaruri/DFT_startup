@@ -14,6 +14,7 @@
 - C/C++/fortranコンパイラ
 - gnuplot
 - Python
+
 ## 下準備
 Xcodeと[Command line tools](https://developer.apple.com/download/more/?=command%20line%20tools)を入れる。
 Terminalを立ち上げて
@@ -82,6 +83,16 @@ gnuplot>
 ※homebrewを使うと色々オプション設定が必要
 
 ## Python
+### anacondaを使う場合
+anacondaのHPから(ダウンロード)[https://www.anaconda.com/products/individual]  
+すぐにterminalでpythonが使えるように.zshrcが書き換えられてるはず。
+```shell script
+conda create --name env1
+conda activate env1
+```
+でbase環境以外の仮想環境を作ることができる。CrySPY用の環境は全てココに入れたほうが良い(baseに入れてもCrySPYしか使わないのであればなんとかなる)
+
+### virtualenvを使う場合
 port経由でpython3とpipを入れる
 ```shell script
 $ sudo port install python37
@@ -111,7 +122,8 @@ source env1/bin/activate
 ```
 activateしてからpip installをすることによってソースコード毎に違う環境で作業出来る。
 CrySPY専用の環境もこれで作る。
-※最初からanacondaを使って逃げてもいい。pipenv、poetryなどでも良い。
+※pipenv、poetryなどを使っても良い。
+
 # OpenMX
 [OpenMX](http://openmx-square.org/)のビルドには
 - MPICH
