@@ -52,6 +52,11 @@ gnuplot>
 と出れば成功。
 ※homebrewを使うと色々オプション設定が必要
 # OpenMX
+[OpenMX](http://openmx-square.org/)のビルドには
+- MPICH
+- intel MKL
+- fftw3
+が必要
 ## MPICH
 gccのバージョンに対応したmpichを入れる
 ```shell script
