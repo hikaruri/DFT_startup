@@ -216,15 +216,19 @@ $ pip install -U -r requirement.txt
 $ pip install notebook
 ```
 ## find_wy
+
 マニュアル通りインストールすれば良い
 https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html  
-エラーが出るのでコードを修正する必要がある
+
+gfortranでコンパイルする場合、エラーが出るのでコードを修正する必要がある
 https://tomoki-yamashita.github.io/CrySPY/installation.html#installation-of-find-wy
+
 ## COMBO
 [tsudalab/combo3](https://github.com/tsudalab/combo3)から
 ```shell script
 git clone https://github.com/tsudalab/combo3.git
 ```
+
 Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.
 You can't install combo3 by
 ```shell script
