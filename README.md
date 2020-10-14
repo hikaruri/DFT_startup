@@ -63,6 +63,7 @@ $ sudo port install mpich-gcc8
 $ mpicc -v
 gcc version 8.4.0 (MacPorts gcc8 8.4.0_0) 
 ```
+※OpenMPIはMKLと一緒に使えない、OpenMPI+scalapackを使いたい場合は(こちら)[https://qiita.com/hikaruri/items/0fa942c9eacb8930a792]
 ## intel MKL
 [intel MKL](https://software.intel.com/content/www/us/en/develop/documentation/get-started-with-mkl-for-macos/top.html)
 をダウンロード。ライブラリは/opt/intel/mkl/に入る
@@ -84,9 +85,17 @@ $ tar -zxvf patch3.8.5.tar.gz
 ```
 ./openmx3.8/source/makefileのLIB、FC、CCをいじる
 ```shell script
+FFTROOT = /opt/local
+LBSROOT = /opt/intel/mkl
 
+LIB= -L$(FFTROOT)/lib -lfftw3 -L$(LBSROOT)/lib -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lgfortran -lmkl_scalapack_lp64 -lmkl_blacs_mpich_lp64 -lmpi_mpifh
+CC = mpicc -fopenmp -O3 -I$(LBSROOT)/include -I$(FFTROOT)/include
+FC = mpif90 -fopenmp -O3 -I$(LBSROOT)/include
 ```
+書き換えたら
+```shell script
+make all
+```
+でエラーなく終われば成功。困ったら[スライド](http://www.openmx-square.org/tech_notes/OpenMX-Compile.pdf)をみよ
 # 参考
 [https://github.com/kaityo256/lab_startup](kaityo256/lab_startup)
-
-
