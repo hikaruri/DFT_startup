@@ -43,8 +43,10 @@ $ sudo port install gcc8
 ```shell script
 $ sudo port select --list gcc
   mp-gcc8
-  none
+  none (active)
 $ sudo port select --set gcc mp-gcc8
+Selecting 'mp-gcc8' for 'gcc' succeeded. 'mp-gcc8' is now active.
+$ sudo port select --list gcc
   mp-gcc8 (active)
   none
 ```
