@@ -83,8 +83,8 @@ gnuplot>
 ※homebrewを使うと色々オプション設定が必要
 
 ## Python
-### anacondaを使う場合
-anacondaのHPから(ダウンロード)[https://www.anaconda.com/products/individual]  
+### anacondaを使う場合(Easy)
+anacondaのHPから[ダウンロード](https://www.anaconda.com/products/individual)
 すぐにterminalでpythonが使えるように.zshrcが書き換えられてるはず。
 ```shell script
 conda create --name env1
