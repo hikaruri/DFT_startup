@@ -24,13 +24,16 @@ $gcc -v
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 ```
 と出てきたら成功(clangと出てくれば大丈夫)。
-## 
+
+## macports
 [macports](https://github.com/macports/macports-base/releases/tag/v2.6.3)
 環境は全て/opt/に入るので、最悪ここを消せば元に戻る(らしい)。
 ```shell script
 $ sudo port selfupdate
 ```
-を叩いておく
+を使う前に叩いておく。
+※Homebrewを使っても良い
+
 ## C/C++/fortranコンパイラ
 最新のgccを検索
 ```shell script
@@ -63,7 +66,8 @@ $gcc -v
 (中略)
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 ```
-は失敗
+とclangのままだと失敗
+
 ## gnuplot
 ### For Catalina User
 For Catalina, macports version's gnuplot has [some bugs.](https://qiita.com/_shin_/items/9d1482b7f21d7f2bc8c6).
@@ -80,7 +84,6 @@ Terminal type is now 'aqua'
 gnuplot> 
 ```
 と出れば成功。
-※homebrewを使うと色々オプション設定が必要
 
 ## Python
 ### anacondaを使う場合(Easy)
@@ -122,33 +125,38 @@ source env1/bin/activate
 ```
 activateしてからpip installをすることによってソースコード毎に違う環境で作業出来る。
 CrySPY専用の環境もこれで作る。
-※pipenv、poetryなどを使っても良い。
+※pipenvやpoetryなどを使っても良い。
 
 # OpenMX
 [OpenMX](http://openmx-square.org/)のビルドには
 - MPICH
-- intel MKL
 - fftw3
+- intel MKL(option)
 が必要
+
 ## MPICH
 gccのバージョンに対応したmpichを入れる
 ```shell script
 $ sudo port search mpich
 $ sudo port install mpich-gcc8
-```
-入ったらバージョンを確認
-```shell script
+$ sudo port select --list mpi
+mpich-gcc8-fortran
+none (active)
+$ sudo port select --set mpi mpich-gcc8-fortran
+Selecting 'mpich-gcc8-fortran' for 'mpi' succeeded. 'mpich-gcc8-fortran' is now active.
 $ mpicc -v
 gcc version 8.4.0 (MacPorts gcc8 8.4.0_0) 
 ```
-※OpenMPIはMKLと一緒に使えない、OpenMPI+scalapackを使いたい場合は[こちら](https://qiita.com/hikaruri/items/0fa942c9eacb8930a792)
-## intel MKL
-[intel MKL](https://software.intel.com/content/www/us/en/develop/documentation/get-started-with-mkl-for-macos/top.html)
-をダウンロード。ライブラリは/opt/intel/mkl/に入る
+※OpenMPIでも良いが、MKLと一緒に使えない、
+OpenMPI+scalapackを使いたい場合は[こちら](https://qiita.com/hikaruri/items/0fa942c9eacb8930a792)
 ## fftw3
 ```shell script
 $ sudo port install fftw-3
 ```
+## intel MKL(option)
+[intel MKL](https://software.intel.com/content/www/us/en/develop/documentation/get-started-with-mkl-for-macos/top.html)
+をダウンロード。ライブラリは/opt/intel/mkl/に入る
+
 ## OpenMXのbuild
 ソースコードを解凍
 ```shell script
@@ -161,7 +169,8 @@ $ wget http://openmx-square.org/bugfixed/18June12/patch3.8.5.tar.gz
 $ cp patch3.8.5.tar.gz openmx3.8/source
 $ tar -zxvf patch3.8.5.tar.gz
 ```
-./openmx3.8/source/makefileのLIB、FC、CCをいじる
+./openmx3.8/source/makefileのLIB、FC、CCをいじる。
+### Using MKL
 ```shell script
 FFTROOT = /opt/local
 LBSROOT = /opt/intel/mkl
@@ -170,10 +179,51 @@ LIB= -L$(FFTROOT)/lib -lfftw3 -L$(LBSROOT)/lib -lmkl_intel_lp64 -lmkl_intel_thre
 CC = mpicc -fopenmp -O3 -I$(LBSROOT)/include -I$(FFTROOT)/include
 FC = mpif90 -fopenmp -O3 -I$(LBSROOT)/include
 ```
+### Using normal lapack and blas
+```shell script
+CC = mpicc -O3 -fopenmp -I/opt/local/include -I/usr/include
+FC = mpif90 -O3 -fopenmp -I/usr/include
+LIB = -L/opt/local/lib -lfftw3 -llapack -lblas -lgfortran -lmpi_mpifh
+```
 書き換えたら
 ```shell script
 make all
 ```
 でエラーなく終われば成功。困ったら[スライド](http://www.openmx-square.org/tech_notes/OpenMX-Compile.pdf)をみよ
-## CrySPYのsetup
-- find_wy, 
+# CrySPYのsetup
+CrySPY0.8.0を使うには
+- find_wy
+- COMBO
+が必要。
+## find_wy
+https://github.com/nim-hrkn/find_wy
+## COMBO
+[tsudalab/combo3](https://github.com/tsudalab/combo3)から
+```shell script
+git clone https://github.com/tsudalab/combo3.git
+```
+Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.
+You can't install combo3 by
+```shell script
+git clone https://github.com/tsudalab/combo.git
+```
+### requirement
+```Bash:reqCOMBO.txt
+numpy >=1.10
+scipy >= 0.16
+Cython >= 0.22.1
+```
+とtxtファイルに書いて
+```shell script
+pip install -U -r reqCOMBO.txt
+```
+とすれば一発で入る。インストールしたら
+```shell script
+cd combo3
+python setup.py install
+```
+を実行しセットアップ。**一度ディレクトリの外に出てから**
+```shell script
+(python) import combo
+```
+を実行し、エラーが出てないことを確認したら成功
