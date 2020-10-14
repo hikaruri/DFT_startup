@@ -79,7 +79,7 @@ gnuplot>
 ## Python enviroment
 ### anacondaを使う場合(Easy)
 anacondaのHPから[ダウンロード](https://www.anaconda.com/products/individual)
-すぐにterminalでpythonが使えるように.zshrcが書き換えられてるはず。
+すぐにterminalでpythonが使えるように.bashrc(catalinaなら.zshrc)が書き換えられてるはず。
 ```shell script
 conda create --name env1
 conda activate env1
@@ -115,5 +115,5 @@ env1をactivate
 source env1/bin/activate
 ```
 activateしてからpip installをすることによってソースコード毎に違う環境で作業出来る。
-CrySPY専用の環境もこれで作る。
+CrySPY専用の環境もこれで作る。  
 ※pipenvやpoetryなどを使っても良い。
