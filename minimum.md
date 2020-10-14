@@ -3,10 +3,12 @@
 - macports
 - C/C++/fortran compiler
 - gnuplot
-- Python
+- Python enviroment
+
 を入れる
 
 ## 下準備
+
 Xcodeと[Command line tools](https://developer.apple.com/download/more/?=command%20line%20tools)を入れる。
 Terminalを立ち上げて
 ```shell script
@@ -76,7 +78,7 @@ gnuplot>
 ```
 と出れば成功。
 
-## Python
+## Python enviroment
 ### anacondaを使う場合(Easy)
 anacondaのHPから[ダウンロード](https://www.anaconda.com/products/individual)
 すぐにterminalでpythonが使えるように.zshrcが書き換えられてるはず。
