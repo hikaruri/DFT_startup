@@ -1,5 +1,10 @@
 # DFT_startup
 自分/研究室用メモ。Macの環境構築。
+- 最低限の設定
+- OpenMX
+- CrySPY
+- soiap
+- Quantum Espresso
 # 最低限の設定
 - パッケージ管理ソフト(macports)
 - C/C++/fortranコンパイラ
