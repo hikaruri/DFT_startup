@@ -217,7 +217,7 @@ $ pip install notebook
 ```
 ## find_wy
 マニュアル通りインストールすれば良い
-https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html
+https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html  
 エラーが出るのでコードを修正する必要がある
 https://tomoki-yamashita.github.io/CrySPY/installation.html#installation-of-find-wy
 ## COMBO
