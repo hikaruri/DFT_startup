@@ -13,6 +13,7 @@
 - パッケージ管理ソフト(macports)
 - C/C++/fortranコンパイラ
 - gnuplot
+- Python
 ## 下準備
 Xcodeと[Command line tools](https://developer.apple.com/download/more/?=command%20line%20tools)を入れる。
 Terminalを立ち上げて
@@ -60,6 +61,32 @@ gnuplot>
 ```
 と出れば成功。
 ※homebrewを使うと色々オプション設定が必要
+
+## Python
+port経由でpython3とpipを入れる
+```shell script
+$ sudo port install python37
+$ sudo port install py37-pip
+$ python3 --version
+Python 3.7.5
+```
+Virtualenvで仮想環境を用意する準備
+```shell script
+$ pip install virtualenv
+$ virtualenv --version
+virtualenv 20.0.28
+```
+仮想環境env1を作る
+```shell script
+virtualenv env1
+```
+env1をactivate
+```shell script
+source env1/bin/activate
+```
+activateしてからpip installをすることによってソースコード毎に違う環境で作業出来る。
+CrySPY専用の環境もこれで作る。
+※anacondaを使って逃げてもいい。pipenv、poetryなどでも良い。
 # OpenMX
 [OpenMX](http://openmx-square.org/)のビルドには
 - MPICH
