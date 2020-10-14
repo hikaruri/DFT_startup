@@ -88,8 +88,8 @@ $ sudo port install python37
 $ sudo port install py37-pip
 $ sudo port select --list python
   none
-	python27-apple (active)
-	python37
+  python27-apple (active)
+  python37
 $ sudo port select --set python python37
 Selecting 'python37' for 'python' succeeded. 'python37' is now active.
 $ python --version
