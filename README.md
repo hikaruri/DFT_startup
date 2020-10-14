@@ -1,10 +1,11 @@
 # DFT_startup
-自分/研究室用メモ。Macの環境構築。
+研究室用メモ。Macの環境構築。
 - 最低限の設定
 - OpenMX
 - CrySPY
 - soiap
 - Quantum Espresso
+も参考にせよ(kaityo256/lab_startup)[https://github.com/kaityo256/lab_startup]
 # 最低限の設定
 - パッケージ管理ソフト(macports)
 - C/C++/fortranコンパイラ
@@ -107,5 +108,5 @@ FC = mpif90 -fopenmp -O3 -I$(LBSROOT)/include
 make all
 ```
 でエラーなく終われば成功。困ったら[スライド](http://www.openmx-square.org/tech_notes/OpenMX-Compile.pdf)をみよ
-# 参考
-[https://github.com/kaityo256/lab_startup](kaityo256/lab_startup)
+
+
