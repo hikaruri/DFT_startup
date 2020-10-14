@@ -10,7 +10,7 @@ Installしたいものリスト
 Xcodeと[Command line tools](https://developer.apple.com/download/more/?=command%20line%20tools)を入れる。
 Terminalを立ち上げて
 ```shell script
-$gcc -v
+$ gcc -v
 (中略)
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 ```
