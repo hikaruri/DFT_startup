@@ -70,7 +70,7 @@ Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 
 ## gnuplot
 ### For Catalina User
-For Catalina, macports version's gnuplot has [some bugs.](https://qiita.com/_shin_/items/9d1482b7f21d7f2bc8c6).
+For Catalina, macports version's gnuplot has [some bugs](https://qiita.com/_shin_/items/9d1482b7f21d7f2bc8c6).
 Please install [the binary version](https://csml-wiki.northwestern.edu/index.php/Binary_versions_of_Gnuplot_for_OS_X).
 ### Others
 macports経由で
@@ -194,7 +194,22 @@ make all
 CrySPY0.8.0を使うには
 - find_wy
 - COMBO
-が必要。
+が必要。その前に必要なpythonパッケージをpipでインストール
+## requirement
+requirement.txtに
+```
+numpy >=1.10
+scipy >= 0.16
+Cython >= 0.22.1
+pandas
+pymatgen
+```
+と書いて
+```shell script
+pip install -U -r requirement.txt
+```
+とすれば一発で入る。  
+※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある
 ## find_wy
 https://github.com/nim-hrkn/find_wy
 ## COMBO
@@ -207,17 +222,7 @@ You can't install combo3 by
 ```shell script
 git clone https://github.com/tsudalab/combo.git
 ```
-### requirement
-```Bash:reqCOMBO.txt
-numpy >=1.10
-scipy >= 0.16
-Cython >= 0.22.1
-```
-とtxtファイルに書いて
-```shell script
-pip install -U -r reqCOMBO.txt
-```
-とすれば一発で入る。インストールしたら
+インストールしたら
 ```shell script
 cd combo3
 python setup.py install
@@ -227,3 +232,5 @@ python setup.py install
 (python) import combo
 ```
 を実行し、エラーが出てないことを確認したら成功
+## CrySPYのセットアップ
+CrySPY/CrySPY/find_wy/にfind_wyをコピー
