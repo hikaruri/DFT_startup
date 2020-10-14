@@ -6,6 +6,7 @@
 - [CrySPY](https://github.com/Tomoki-YAMASHITA/CrySPY)
 - [soiap](https://github.com/nbsato/soiap)
 - [Quantum Espresso](https://www.quantum-espresso.org/)
+- [GULP]
 
 [kaityo256/lab_startup](https://github.com/kaityo256/lab_startup)も参考にせよ
 
@@ -217,11 +218,10 @@ $ pip install notebook
 ```
 ## find_wy
 
-マニュアル通りインストールすれば良い
-https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html  
+[マニュアル](https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html)
+通りインストールすれば良い
 
-gfortranでコンパイルする場合、エラーが出るのでコードを修正する必要がある
-https://tomoki-yamashita.github.io/CrySPY/installation.html#installation-of-find-wy
+gfortranでコンパイルする場合、エラーが出るので[コードを修正する必要がある](https://tomoki-yamashita.github.io/CrySPY/installation.html#installation-of-find-wy)
 
 ## COMBO
 [tsudalab/combo3](https://github.com/tsudalab/combo3)から
