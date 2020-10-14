@@ -1,17 +1,19 @@
 # DFT_startup
 研究室用メモ。Macの環境構築。
+
 - 最低限の設定
-- OpenMX
-- CrySPY
-- soiap
-- Quantum Espresso
+- [OpenMX](http://openmx-square.org/)
+- [CrySPY](https://github.com/Tomoki-YAMASHITA/CrySPY)
+- [soiap](https://github.com/nbsato/soiap)
+- [Quantum Espresso](https://www.quantum-espresso.org/)
+
 も参考にせよ(kaityo256/lab_startup)[https://github.com/kaityo256/lab_startup]
 # 最低限の設定
 - パッケージ管理ソフト(macports)
 - C/C++/fortranコンパイラ
 - gnuplot
 ## 下準備
-Xcodeと[Command line tools](https://developer.apple.com/download/more/?=command%20line%20tools)を入れる。　　
+Xcodeと[Command line tools](https://developer.apple.com/download/more/?=command%20line%20tools)を入れる。
 Terminalを立ち上げて
 ```shell script
 $gcc -v
