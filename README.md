@@ -22,7 +22,7 @@ $gcc -v
 (中略)
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 ```
-と出てきたら成功。
+と出てきたら成功(clangと出てくれば大丈夫)。
 ## パッケージ管理ソフト
 [macports](https://github.com/macports/macports-base/releases/tag/v2.6.3)
 環境は全て/opt/に入るので、最悪ここを消せば元に戻る(らしい)。
@@ -33,6 +33,7 @@ $ sudo port search gcc
 ```
 gcc8を入れる
 ```shell script
+$ sudo port install gcc
 $ sudo port install gcc8
 ```
 インストールしたら確認
@@ -86,7 +87,7 @@ source env1/bin/activate
 ```
 activateしてからpip installをすることによってソースコード毎に違う環境で作業出来る。
 CrySPY専用の環境もこれで作る。
-※anacondaを使って逃げてもいい。pipenv、poetryなどでも良い。
+※最初からanacondaを使って逃げてもいい。pipenv、poetryなどでも良い。
 # OpenMX
 [OpenMX](http://openmx-square.org/)のビルドには
 - MPICH
@@ -138,5 +139,5 @@ FC = mpif90 -fopenmp -O3 -I$(LBSROOT)/include
 make all
 ```
 でエラーなく終われば成功。困ったら[スライド](http://www.openmx-square.org/tech_notes/OpenMX-Compile.pdf)をみよ
-
-
+## CrySPYのsetup
+- find_wy, 
