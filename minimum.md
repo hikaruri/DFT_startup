@@ -1,11 +1,9 @@
-# 最低限の設定
-
+# minimum setup
+Install
 - macports
 - C/C++/fortran compiler
 - gnuplot
 - Python enviroment
-
-を入れる
 
 ## 下準備
 
