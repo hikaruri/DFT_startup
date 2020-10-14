@@ -191,6 +191,7 @@ make all
 ```
 でエラーなく終われば成功。困ったら[スライド](http://www.openmx-square.org/tech_notes/OpenMX-Compile.pdf)をみよ
 # CrySPYのsetup
+基本的に[マニュアル](https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html)通りインストールすれば良い。注意事項をメモ
 CrySPY0.8.0を使うには
 - find_wy
 - COMBO
@@ -206,12 +207,19 @@ pymatgen
 ```
 と書いて
 ```shell script
-pip install -U -r requirement.txt
+$ pip install -U -r requirement.txt
 ```
 とすれば一発で入る。  
-※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある
+※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある  
+可視化のためにjupyter notebookもinstall
+```shell script
+$ pip install notebook
+```
 ## find_wy
-https://github.com/nim-hrkn/find_wy
+マニュアル通りインストールすれば良い
+https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html
+エラーが出るのでコードを修正する必要がある
+https://tomoki-yamashita.github.io/CrySPY/installation.html#installation-of-find-wy
 ## COMBO
 [tsudalab/combo3](https://github.com/tsudalab/combo3)から
 ```shell script
@@ -232,5 +240,3 @@ python setup.py install
 (python) import combo
 ```
 を実行し、エラーが出てないことを確認したら成功
-## CrySPYのセットアップ
-CrySPY/CrySPY/find_wy/にfind_wyをコピー
