@@ -86,7 +86,13 @@ port経由でpython3とpipを入れる
 ```shell script
 $ sudo port install python37
 $ sudo port install py37-pip
-$ python3 --version
+$ sudo port select --list python
+  none
+	python27-apple (active)
+	python37
+$ sudo port select --set python python37
+Selecting 'python37' for 'python' succeeded. 'python37' is now active.
+$ python --version
 Python 3.7.5
 ```
 Virtualenvで仮想環境を用意する準備
