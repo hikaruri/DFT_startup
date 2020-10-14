@@ -77,7 +77,7 @@ $ sudo port install mpich-gcc8
 $ mpicc -v
 gcc version 8.4.0 (MacPorts gcc8 8.4.0_0) 
 ```
-※OpenMPIはMKLと一緒に使えない、OpenMPI+scalapackを使いたい場合は(こちら)[https://qiita.com/hikaruri/items/0fa942c9eacb8930a792]
+※OpenMPIはMKLと一緒に使えない、OpenMPI+scalapackを使いたい場合は[こちら](https://qiita.com/hikaruri/items/0fa942c9eacb8930a792)
 ## intel MKL
 [intel MKL](https://software.intel.com/content/www/us/en/develop/documentation/get-started-with-mkl-for-macos/top.html)
 をダウンロード。ライブラリは/opt/intel/mkl/に入る
