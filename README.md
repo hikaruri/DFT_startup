@@ -10,8 +10,8 @@
 [kaityo256/lab_startup](https://github.com/kaityo256/lab_startup)も参考にせよ
 
 # 最低限の設定
-- パッケージ管理ソフト(macports)
-- C/C++/fortranコンパイラ
+- macports
+- C/C++/fortran compiler
 - gnuplot
 - Python
 
@@ -24,7 +24,7 @@ $gcc -v
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 ```
 と出てきたら成功(clangと出てくれば大丈夫)。
-## パッケージ管理ソフト
+## 
 [macports](https://github.com/macports/macports-base/releases/tag/v2.6.3)
 環境は全て/opt/に入るので、最悪ここを消せば元に戻る(らしい)。
 ```shell script
@@ -147,7 +147,7 @@ gcc version 8.4.0 (MacPorts gcc8 8.4.0_0)
 をダウンロード。ライブラリは/opt/intel/mkl/に入る
 ## fftw3
 ```shell script
-$ sudo port install fftw3
+$ sudo port install fftw-3
 ```
 ## OpenMXのbuild
 ソースコードを解凍
