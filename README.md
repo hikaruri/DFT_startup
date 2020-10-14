@@ -7,7 +7,8 @@
 - [soiap](https://github.com/nbsato/soiap)
 - [Quantum Espresso](https://www.quantum-espresso.org/)
 
-も参考にせよ(kaityo256/lab_startup)[https://github.com/kaityo256/lab_startup]
+[kaityo256/lab_startup](https://github.com/kaityo256/lab_startup)も参考にせよ
+
 # 最低限の設定
 - パッケージ管理ソフト(macports)
 - C/C++/fortranコンパイラ
