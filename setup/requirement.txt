@@ -1,0 +1,5 @@
+numpy >=1.10
+scipy >= 0.16
+Cython >= 0.22.1
+pandas
+pymatgen
