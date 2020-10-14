@@ -1,7 +1,7 @@
 # DFT_startup
 研究室用
 
-##Mac用の環境構築。
+## Mac用の環境構築。
 - [Minimum setup](./minimum.md)
 - [OpenMX setup](./omx.md)
 - [CrySPY setup](./cryspy.md)
