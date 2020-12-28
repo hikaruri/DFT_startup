@@ -59,7 +59,7 @@ OpenMX3.8用、3.9はscalapackが必要になる
 ```shell script
 CC = mpicc -O3 -fopenmp -I/opt/local/include -I/usr/include
 FC = mpif90 -O3 -fopenmp -I/usr/include
-LIB = -L/opt/local/lib -lfftw3 -llapack -lblas -lgfortran -lmpi
+LIB = -L/opt/local/lib -L/opt/local/lib/mpich-gcc8 -lfftw3 -llapack -lblas -lgfortran -lmpi -mpichf90
 #
 # OpenMPIの場合は
 #
