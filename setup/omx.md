@@ -55,6 +55,7 @@ CC = mpicc -fopenmp -O3 -I$(LBSROOT)/include -I$(FFTROOT)/include
 FC = mpif90 -fopenmp -O3 -I$(LBSROOT)/include
 ```
 ### Using normal lapack and blas
+OpenMX3.8用、3.9はscalapackが必要になる
 ```shell script
 CC = mpicc -O3 -fopenmp -I/opt/local/include -I/usr/include
 FC = mpif90 -O3 -fopenmp -I/usr/include
