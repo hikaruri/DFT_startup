@@ -50,7 +50,7 @@ $ tar -zxvf patch3.8.5.tar.gz
 FFTROOT = /opt/local
 LBSROOT = /opt/intel/mkl
 
-LIB= -L$(FFTROOT)/lib -lfftw3 -L$(LBSROOT)/lib -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lgfortran -lmkl_scalapack_lp64 -lmkl_blacs_mpich_lp64 -lmpi_mpifh
+LIB= -L$(FFTROOT)/lib -lfftw3 -L$(LBSROOT)/lib -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lgfortran -lmkl_scalapack_lp64 -lmkl_blacs_mpich_lp64 -lmpi -lmpichf90
 CC = mpicc -fopenmp -O3 -I$(LBSROOT)/include -I$(FFTROOT)/include
 FC = mpif90 -fopenmp -O3 -I$(LBSROOT)/include
 ```
@@ -59,7 +59,7 @@ OpenMX3.8用、3.9はscalapackが必要になる
 ```shell script
 CC = mpicc -O3 -fopenmp -I/opt/local/include -I/usr/include
 FC = mpif90 -O3 -fopenmp -I/usr/include
-LIB = -L/opt/local/lib -L/opt/local/lib/mpich-gcc8 -lfftw3 -llapack -lblas -lgfortran -lmpi -mpichf90
+LIB = -L/opt/local/lib -L/opt/local/lib/mpich-gcc8 -lfftw3 -llapack -lblas -lgfortran -lmpi -lmpichf90
 #
 # OpenMPIの場合は
 #
