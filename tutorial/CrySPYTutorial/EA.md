@@ -3,7 +3,7 @@
 構造最適化にはOpenMXを利用する。
 ## 概要
 そのうち詳しく書く
-## 入力ファイル
+## 入力ファイルとパラメータ
 [cryspy.in](./OMX_C16_EA/cryspy.in)とcalc_inディレクトリを用意
 ### cryspy.inについて
 EAに関連するパラメータについて説明する
@@ -23,4 +23,9 @@ slct_func = TNM
 t_size = 2
 maxgen_ea = 3
 ```
-## 各種パラメータの説明
+## 実行
+ランダムサーチと同様に
+```
+python -u $CrySPYPATH/cryspy.py 1>>log 2>>err
+```
+を実行すると構造がtot_struc=30個分生成される。
