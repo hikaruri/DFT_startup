@@ -3,3 +3,4 @@
 - ランダムサーチ
 - 遺伝的アルゴリズム
 - ベイズ最適化
+CrySPYのマニュアルは[ここ](https://tomoki-yamashita.github.io/CrySPY/index.html)
