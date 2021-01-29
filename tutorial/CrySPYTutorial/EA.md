@@ -26,6 +26,6 @@ maxgen_ea = 3
 ## 実行
 ランダムサーチと同様に
 ```
-python -u $CrySPYPATH/cryspy.py 1>>log 2>>err
+python -u ($CrySPYPATH)/cryspy.py 1>>log 2>>err
 ```
 を実行すると構造がtot_struc=30個分生成される。
