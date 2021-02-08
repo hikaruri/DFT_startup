@@ -8,7 +8,7 @@ CrySPY0.8.0を使うには
 
 が必要。その前に必要なpythonパッケージをpipでインストール
 
-## requirement
+## requirement0.8.0
 requirement.txtに
 ```
 numpy >=1.10
@@ -27,6 +27,22 @@ $ pip install -U -r requirement.txt
 ```shell script
 $ pip install notebook
 ```
+## requirement0.8.0
+requirement.txtに
+```
+numpy >=1.10
+scipy == 1.5.4
+Cython >= 0.22.1
+mpi4py >= 2.0
+notebook >= 6.2.0
+PyXtal >= 0.1.6
+pymatgen == 2020.12.31
+```
+と書いて
+```shell script
+$ pip install -U -r requirement.txt
+```
+とすれば一発で入る。
 ## find_wy
 
 [マニュアル](https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html)
