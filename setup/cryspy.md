@@ -27,7 +27,7 @@ $ pip install -U -r requirement.txt
 ```shell script
 $ pip install notebook
 ```
-## requirement0.8.0
+## requirement0.9.0
 requirement.txtに
 ```
 numpy >=1.10
