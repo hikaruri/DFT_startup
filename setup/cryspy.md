@@ -34,9 +34,11 @@ numpy >=1.10
 scipy == 1.5.4
 Cython >= 0.22.1
 mpi4py >= 2.0
-notebook >= 6.2.0
 PyXtal >= 0.1.6
 pymatgen == 2020.12.31
+notebook >= 6.2.0
+pandas >= 1.2.1
+matplotlib >= 3.3.4
 ```
 と書いて
 ```shell script
