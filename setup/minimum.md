@@ -51,14 +51,23 @@ $gcc -v
 (中略)
 gcc version 8.4.0 (MacPorts gcc8 8.4.0_0) 
 ```
-と出たら成功。
+と出たら成功。  
+※[gcc10の場合、OpenMXのコンパイルに失敗することがある](http://www.openmx-square.org/forum/patio.cgi?mode=view&no=2704)
 ```shell script
 $gcc -v
 (中略)
 Apple LLVM version 10.0.0 (clang-1000.11.45.5)
 ```
-とclangのままだと失敗
-
+とclangのままだと失敗  
+※Catalinaの場合はコンパイルの際に
+```
+fatal error: 'stdio.h' file not found
+```
+とエラーが出る場合があるので.zshrcに
+```
+export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+```
+と入れる必要がある
 ## gnuplot
 ### For Catalina User
 For Catalina, macports version's gnuplot has [some bugs](https://qiita.com/_shin_/items/9d1482b7f21d7f2bc8c6).
