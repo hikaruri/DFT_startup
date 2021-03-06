@@ -100,6 +100,11 @@ Selecting 'python37' for 'python' succeeded. 'python37' is now active.
 $ python --version
 Python 3.7.5
 ```
+※PATHが通っていない時は.bashrcや.zshrcに
+```
+export PATH=$PATH:/Users/sawahata/Library/Python/3.8/bin
+```
+と書く必要がある。  
 Virtualenvで仮想環境を用意する準備
 ```shell script
 $ pip install virtualenv
