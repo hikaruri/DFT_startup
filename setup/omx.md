@@ -29,7 +29,7 @@ OpenMPI+scalapackを使いたい場合は[こちら](https://qiita.com/hikaruri/
 $ sudo port install fftw-3
 ```
 ## intel MKL(option)
-[intel MKL](https://software.intel.com/content/www/us/en/develop/documentation/get-started-with-mkl-for-macos/top.html)
+[intel MKL](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html)
 をダウンロード。ライブラリは/opt/intel/mkl/に入る
 
 ## OpenMXのbuild
