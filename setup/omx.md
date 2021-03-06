@@ -30,7 +30,7 @@ $ sudo port install fftw-3
 ```
 ## intel MKL(option)
 [intel MKL](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html)
-をダウンロード。ライブラリは/opt/intel/mkl/に入る
+をダウンロード。ライブラリは/opt/intel/oneapi/mkl/(バージョン)に入る
 
 ## OpenMXのbuild
 ソースコードを解凍
