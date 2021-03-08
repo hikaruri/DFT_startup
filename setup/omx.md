@@ -30,8 +30,16 @@ $ sudo port install fftw-3
 ```
 ## intel MKL(option)
 [intel MKL](https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html)
-をダウンロード。ライブラリは/opt/intel/oneapi/mkl/(バージョン)に入る
-
+をダウンロード。ライブラリは/opt/intel/oneapi/mkl/(バージョン)に入る。  
+環境変数の設定は
+```
+/opt/intel/oneapi/setvars.sh
+```
+のシェルスクリプトを実行すれば良い(らしい)ので、.zshrcに
+```
+source /opt/intel/oneapi/setvars.sh > /dev/null
+```
+を追加しておく。
 ## OpenMXのbuild
 ソースコードを解凍
 ```shell script
@@ -46,14 +54,18 @@ $ tar -zxvf patch3.8.5.tar.gz
 ```
 ./openmx3.8/source/makefileのLIB、FC、CCをいじる。
 ### Using MKL
-```shell script
-FFTROOT = /opt/local
-LBSROOT = /opt/intel/mkl
-
-LIB= -L$(FFTROOT)/lib -lfftw3 -L$(LBSROOT)/lib -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lgfortran -lmkl_scalapack_lp64 -lmkl_blacs_mpich_lp64 -lmpi -lmpichf90
-CC = mpicc -fopenmp -O3 -I$(LBSROOT)/include -I$(FFTROOT)/include
-FC = mpif90 -fopenmp -O3 -I$(LBSROOT)/include
 ```
+echo $MKLROOT
+```
+をして/opt/intel/oneapi/mkl/latestが表示されることを確認。Makefileに
+```
+FFTROOT = /opt/local
+
+LIB= -L/opt/local/Lib/libgcc -lgfortran -L/opt/intel/oneapi/compiler/2021.1.1/mac/compiler/lib -L$(FFTROOT)/lib -lfftw3 -L$(MKLROOT)/lib -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -lpthread -lmkl_scalapack_lp64 -lmkl_blacs_mpich_lp64 -lmpi -lmpichf90
+CC = mpicc -fopenmp -O3 -I$(MKLROOT)/include -I$(FFTROOT)/include
+FC = mpif90 -fopenmp -O3 -I$(MKLROOT)/include
+```
+と記述。
 ### Using normal lapack and blas
 OpenMX3.8用、3.9はscalapackが必要になる
 ```shell script
