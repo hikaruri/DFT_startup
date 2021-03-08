@@ -40,7 +40,7 @@ $ sudo port install fftw-3
 source /opt/intel/oneapi/setvars.sh > /dev/null
 ```
 を追加しておく。  
-※MKLがoneAPIに取り込まれたのでOpenMXのInstallスライドを見る時は注意
+※MKLがoneAPIに取り込まれたのでOpenMXの[Installスライド](http://www.openmx-square.org/tech_notes/OpenMX-Compile.pdf)を見る時はPATHに注意
 ## OpenMXのbuild
 ソースコードを解凍
 ```shell script
