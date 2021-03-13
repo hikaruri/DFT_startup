@@ -52,6 +52,7 @@ source /opt/intel/oneapi/setvars.sh > /dev/null
 を追加しておく。  
 ※MKLがoneAPIに取り込まれたのでOpenMXの[Installスライド](http://www.openmx-square.org/tech_notes/OpenMX-Compile.pdf)を見る時はPATHに注意
 ## OpenMXのbuild
+
 ソースコードを解凍
 
 ```
@@ -61,7 +62,7 @@ $ tar -zxvf openmx3.8.tar.gz
 
 patchファイルを解凍
 
-```shell script
+```
 $ wget http://openmx-square.org/bugfixed/18June12/patch3.8.5.tar.gz
 $ cp patch3.8.5.tar.gz openmx3.8/source
 $ tar -zxvf patch3.8.5.tar.gz
