@@ -1,0 +1,10 @@
+# インプットファイルの準備
+CrySPYのインプットに
+
+- cryspy.in
+- calc_in/job_cryspy
+- calc_in/omx.in
+
+の三つのファイルを用意する必要がある
+
+## cryspy.in
