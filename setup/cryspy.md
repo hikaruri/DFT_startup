@@ -25,7 +25,8 @@ notebook
 $ pip install -U -r requirement.txt
 ```
 とすれば一発で入る。  
-※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある  
+※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある、共用計算機の場合はanacondaなどでインストールすると上手くいくときもある。
+
 ### find_wy
 
 [マニュアル](https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html)
