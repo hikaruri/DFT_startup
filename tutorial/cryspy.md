@@ -1,5 +1,7 @@
 # CrySPY tutorial
-炭素原子の結晶構造探索でダイヤモンド構造を自動で探し出す
+## Preparetion
+- [インプットファイルの準備](./CrySPYTutorial/input.md)
+## Method
 - [ランダムサーチ](./CrySPYTutorial/RS.md)
 - [遺伝的アルゴリズム](./CrySPYTutorial/GA.md)
 - [ベイズ最適化](./CrySPYTutorial/RS.md)
