@@ -76,7 +76,7 @@ matplotlib >= 3.3.4
 $ pip install -U -r requirement.txt
 ```
 とすれば一発で入る。
-
+※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある、共用計算機の場合はanacondaなどでインストールすると上手くいくときもある。
 
 ### COMBO
 [tsudalab/combo3](https://github.com/tsudalab/combo3)から
