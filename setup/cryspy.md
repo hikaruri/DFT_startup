@@ -41,7 +41,18 @@ gfortranでコンパイルする場合、エラーが出るので[コードを�
 ```shell script
 git clone https://github.com/tsudalab/combo3.git
 ```
-Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.
+Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.  
+
+インストールしたら
+```shell script
+cd combo3
+python setup.py install
+```
+を実行しセットアップ。**一度ディレクトリの外に出てから**
+```shell script
+(python) import combo
+```
+を実行し、エラーが出てないことを確認したら成功
 
 ## Install0.9.0
 CrySPY0.9.0を使うには
@@ -75,4 +86,14 @@ $ pip install -U -r requirement.txt
 ```shell script
 git clone https://github.com/tsudalab/combo3.git
 ```
-Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.
+Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.  
+インストールしたら
+```shell script
+cd combo3
+python setup.py install
+```
+を実行しセットアップ。**一度ディレクトリの外に出てから**
+```shell script
+(python) import combo
+```
+を実行し、エラーが出てないことを確認したら成功
