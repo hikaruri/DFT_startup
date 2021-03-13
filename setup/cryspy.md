@@ -18,6 +18,7 @@ scipy >= 0.16
 Cython >= 0.22.1
 pandas
 pymatgen
+notebook
 ```
 と書いて
 ```shell script
@@ -25,10 +26,6 @@ $ pip install -U -r requirement.txt
 ```
 とすれば一発で入る。  
 ※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある  
-可視化のためにjupyter notebookもinstall
-```shell script
-$ pip install notebook
-```
 ### find_wy
 
 [マニュアル](https://tomoki-yamashita.github.io/cryspy/tutorial/01_install.html)
