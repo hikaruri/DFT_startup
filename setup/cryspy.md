@@ -12,6 +12,7 @@ CrySPY0.8.0を使うには
 が必要。
 
 requirement.txtに
+
 ```
 numpy >=1.10
 scipy >= 0.16
@@ -20,10 +21,13 @@ pandas
 pymatgen
 notebook
 ```
+
 と書いて
-```shell script
+
+```
 $ pip install -U -r requirement.txt
 ```
+
 とすれば一発で入る。  
 ※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある、共用計算機の場合はanacondaなどでインストールすると上手くいくときもある。
 
@@ -36,20 +40,24 @@ gfortranでコンパイルする場合、エラーが出るので[コードを�
 
 ### COMBO
 [tsudalab/combo3](https://github.com/tsudalab/combo3)から
-```shell script
+
+```
 git clone https://github.com/tsudalab/combo3.git
 ```
 Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.  
 
 インストールしたら
-```shell script
+
+```
 cd combo3
 python setup.py install
 ```
 を実行しセットアップ。**一度ディレクトリの外に出てから**
-```shell script
+
+```
 (python) import combo
 ```
+
 を実行し、エラーが出てないことを確認したら成功
 
 ## Install0.9.0
@@ -61,6 +69,7 @@ CrySPY0.9.0を使うには
 が必要。マニュアルの通り、pyXtalがpython3.9に対応していないのでpython3.8を使う
 
 requirement.txtに
+
 ```
 numpy >=1.10
 scipy == 1.5.4
@@ -72,26 +81,33 @@ notebook >= 6.2.0
 pandas >= 1.2.1
 matplotlib >= 3.3.4
 ```
+
 と書いて
-```shell script
+
+```
 $ pip install -U -r requirement.txt
 ```
+
 とすれば一発で入る。
 ※pymatgenのビルドが失敗した場合はpython-develを入れれば対応できる場合もある、共用計算機の場合はanacondaなどでインストールすると上手くいくときもある。
 
 ### COMBO
 [tsudalab/combo3](https://github.com/tsudalab/combo3)から
-```shell script
+
+```
 git clone https://github.com/tsudalab/combo3.git
 ```
 Warning:[tsudalab/combo repository](https://github.com/tsudalab/combo) is the python2 version.  
 インストールしたら
-```shell script
+
+```
 cd combo3
 python setup.py install
 ```
+
 を実行しセットアップ。**一度ディレクトリの外に出てから**
-```shell script
+
+```
 (python) import combo
 ```
 を実行し、エラーが出てないことを確認したら成功
