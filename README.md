@@ -1,5 +1,5 @@
 # DFT_startup
-研究室用
+OpenMXとCrySPYのための環境構築と使い方。研究室用なので参考程度に使ってください。
 
 ## Mac用の環境構築
 - [Minimum setup](./setup/minimum.md)
