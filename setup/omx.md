@@ -54,7 +54,7 @@ source /opt/intel/oneapi/setvars.sh > /dev/null
 ## OpenMXのbuild
 ソースコードを解凍
 
-```shell script
+```
 $ wget http://t-ozaki.issp.u-tokyo.ac.jp/openmx3.8.tar.gz
 $ tar -zxvf openmx3.8.tar.gz
 ```
@@ -100,7 +100,7 @@ LIB = -L/opt/local/lib -L/opt/local/lib/mpich-gcc8 -lfftw3 -llapack -lblas -lgfo
 
 書き換えたら
 
-```shell script
+```
 make all
 ```
 
