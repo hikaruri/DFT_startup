@@ -11,3 +11,6 @@ OpenMXとCrySPYのための環境構築と使い方。研究室用なので参�
 ## Tutorial
 - [OpenMX](./tutorial/omx.md)
 - [CrySPY](./tutorial/cryspy.md)
+
+## Qiita Article
+- [gnuplotでオセロっぽい図を作る方法](./Qiita/gnuplot_othello.md)
