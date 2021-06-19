@@ -11,7 +11,8 @@
 ※2018/6/1 2次元の場合のコードにミスがあった為修正
 
 ※2018/6/2 コメ欄で教えて頂いている通り、
-```iprocINI = ceil(myid * (double)N / numprocs)
+```
+iprocINI = ceil(myid * (double)N / numprocs)
 ```
 とかにすれば初期値の条件分岐を回避出来たのである....自戒の為、ダサい条件分岐は残しておく。
 

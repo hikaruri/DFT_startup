@@ -13,6 +13,8 @@ OpenMXとCrySPYのための環境構築と使い方。研究室用なので参�
 - [CrySPY](./tutorial/cryspy.md)
 
 ## Qiita Article
+- [超超超超入門Git/Github講座-黒い画面ナシでファイルの更新履歴管理しよう-)](./Qiita/github_tutorial.md)
+- [OpenMX3.9をMacBook proでmakeする(macportsでScaLAPACK+openMPI)](./Qiita/openmx_scalapack.md)
 - [gnuplotでオセロっぽい図を作る方法](./Qiita/gnuplot_othello.md)
 - [綺麗な三次元バンド図をgnuplotで作る](./Qiita/gnuplot_Dirac.md)
 - [OpenMPIで任意の並列数に対応させる方法(単純なfor文の場合)](./Qiita/MPI_1.md)
