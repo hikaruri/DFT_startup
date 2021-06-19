@@ -23,7 +23,7 @@ Final(2).tex
 ほんとうにさいご.tex
 ほんとうにさいご(1).tex
 ```
-**最終版どれだよ！？！？**ってなりますよね。
+**最終版どれだよ**！？！？ってなりますよね。
 こうなったとき、友人から
 **「Gitを使ってバージョン管理をすれば良いんだよ！」**
 ってドヤ顔で言われたことありませんか？僕は10回くらいあります。
@@ -129,10 +129,10 @@ texソースでレポートor論文を書いている場合やプログラミン
 
 
 Githubを使ってファイルのバージョン管理を楽チンにして圧倒的成長しましょう。
+
 ## 勉強意欲が湧いたら
 Git/Githubの詳しい解説については
-- <a href="https://backlog.com/ja/git-tutorial/">
-サルでもわかるGit入門</a>
+- <a href="https://backlog.com/ja/git-tutorial/">サルでもわかるGit入門</a>
 - <a href="https://speakerdeck.com/kaityo256/starting-git">数値計算屋のためのGit入門 / Starting Git</a>
 - <a href="https://techacademy.jp/magazine/6235">今さら聞けない！GitHubの使い方【超初心者向け】</a>
 とか参考にしてください。 
